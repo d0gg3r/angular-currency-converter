@@ -9,10 +9,10 @@ import { RatesService } from '../rates.service';
 })
 export class CurrencyComponent implements OnInit {
   rates: any;
-  currencyFrom: any = 'USD';
-  currencyTo: any = 'UAH';
-  amountFrom!: any;
-  amountTo!: any;
+  currencyFrom = 'USD';
+  currencyTo = 'UAH';
+  amountFrom!: number;
+  amountTo!: number;
   currencies: string[] = [
     'USD',
     'EUR',
