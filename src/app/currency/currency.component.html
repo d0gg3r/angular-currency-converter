@@ -1,0 +1,30 @@
+<main id="Converter" class="wrapper">
+  <app-ticker></app-ticker>
+  <div class="converter__wrapper">
+    <div class="blob">
+      <div class="blob-1"></div>
+      <div class="blob-3 flex__center"></div>
+    </div>
+    <div class="converter__container flex__center">
+      <div class="currency">
+        <input (keyup)="handleInput1($event)" type="text" placeholder="Enter value" name="input1"
+          value="{{amountFrom}}">
+        <select [(ngModel)]="currencyFrom" (change)="handleCurrencyFrom($event)">
+          <option *ngFor="let currency of currencies" value={{currency}}>{{ currency }}</option>
+        </select>
+      </div>
+      <div class="equals">
+        <span>=</span>
+      </div>
+      <div class="currency">
+        <input (keyup)="handleInput2($event)" type="text" placeholder="Enter value" name="input2" value="{{amountTo}}">
+        <select [(ngModel)]="currencyTo" (change)="handleCurrencyTo($event)">
+          <option *ngFor="let currency of currencies" value={{currency}}>{{ currency }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="blob">
+      <div class="blob-2"></div>
+    </div>
+  </div>
+</main>

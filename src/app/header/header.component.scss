@@ -1,0 +1,173 @@
+@use "../scss/utils/" as utils;
+@use "../scss/globals/" as globals;
+
+.loading__container {
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    text-align: center;
+  }
+}
+
+.header {
+  background: #28044a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: globals.$green-neon;
+}
+
+.header__wrapper {
+  border: 1px solid globals.$green-neon;
+  padding: 3rem;
+  border-radius: 5rem;
+  gap: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: utils.$font-gloock;
+  font-size: 6rem;
+}
+
+.header__currency {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: right;
+  font-family: utils.$font-grotesk;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1920px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  .header__currency {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  .header__currency {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  h1 {
+    font-size: 4.6rem;
+  }
+  .header__currency {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .header__wrapper {
+    padding: 2.5rem;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-align: justify;
+  }
+  .header__currency {
+    font-size: 1.5rem;
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .header__wrapper {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  h1 {
+    font-size: 8rem;
+    text-align: center;
+  }
+
+  .header__currency {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  h1 {
+    font-size: 6.5rem;
+  }
+
+  .header__currency {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header__wrapper {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .header__currency {
+    font-size: 1.3rem;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .header__wrapper {
+    height: fit-content;
+    padding: 4rem 1rem;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .header__currency {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .header__wrapper {
+    height: fit-content;
+    padding: 4rem 1rem;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .header__currency {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}

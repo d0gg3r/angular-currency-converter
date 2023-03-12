@@ -1,0 +1,19 @@
+<div class="header flex__center wrapper section__padding">
+  <div class="header__wrapper">
+    <div class="loading__container" *ngIf="loading">
+      <div>
+        <img src="https://i.gifer.com/W1Sd.gif" alt="">
+      </div>
+      <h2 *ngIf="loading">*LOADING RATES*</h2>
+    </div>
+    <div class="header__title" *ngIf="!loading">
+      <h1>Free<br /> Currency<br /> Converter</h1>
+    </div>
+    <div class="header__currency" *ngIf="!loading">
+      <h3>USD - {{usdToUah() | currency : '₴'}}</h3>
+      <h3>EUR - {{eurToUah() | currency : '₴'}}</h3>
+      <p>Last update at {{currentDateTime | date :'d/M/y, h:mm a'}}</p>
+      <a href="#Converter">Open Converter</a>
+    </div>
+  </div>
+</div>

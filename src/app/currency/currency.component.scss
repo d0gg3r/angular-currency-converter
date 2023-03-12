@@ -1,0 +1,174 @@
+@use "../scss/utils" as utils;
+@use "../scss/globals" as globals;
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+}
+
+.currency {
+  font-family: utils.$font-gloock;
+  color: globals.$green-neon;
+  border-bottom: 1px solid globals.$green-neon;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: globals.$green-neon;
+  padding: 0.5rem 0;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+
+  &::placeholder {
+    font-family: utils.$font-grotesk;
+    font-size: 1rem;
+    color: globals.$green-neon;
+  }
+}
+
+select {
+  font-family: utils.$font-grotesk;
+  padding: 0.5rem 0;
+  background: transparent;
+  color: globals.$green-neon;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.converter__wrapper {
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.blob {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: fit-content;
+}
+
+.blob-1 {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 16rem;
+  height: 16rem;
+  background: url("https://disgustingmen.com/wp-content/uploads/2022/11/fart-proudly-5.jpg")
+    no-repeat 15% 10%;
+  background-size: cover;
+  animation: animate-blob 4s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.blob-2 {
+  position: absolute;
+  top: 45%;
+  right: 5%;
+  width: 14rem;
+  height: 14rem;
+  background: url("https://previews.123rf.com/images/niserin/niserin1502/niserin150200005/36109994-queen-elizabeth-ii-portrait-on-50-pound-sterling-banknote-british-currency.jpg")
+    no-repeat 50% 50%;
+  background-size: cover;
+  animation: animate-blob 3s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.converter__container {
+  border: 1px solid globals.$green-neon;
+  padding: 4rem 2rem;
+  flex: 2;
+  gap: 2rem;
+}
+
+.equals {
+  font-family: utils.$font-grotesk;
+  font-size: 2rem;
+  color: globals.$green-neon;
+}
+
+.blob-3 {
+  position: absolute;
+  color: #fff;
+  font-size: 1rem;
+  border: 1px solid #fff;
+  bottom: 5%;
+  left: 50%;
+  width: 5rem;
+  height: 5rem;
+  background: url("https://images.saatchiart.com/saatchi/641331/art/8627743/7691415-HSC00001-7.jpg")
+    no-repeat;
+  background-size: cover;
+  animation: animate-blob 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@media screen and (max-width: 1090px) {
+  .blob-1 {
+    top: 10%;
+    width: 14rem;
+
+    height: 14rem;
+  }
+
+  .blob-2 {
+    width: 12rem;
+    height: 12rem;
+    top: 65%;
+  }
+
+  .blob-3 {
+    left: 35%;
+    bottom: 10%;
+  }
+
+  .converter__container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .blob-1 {
+    top: 7%;
+  }
+
+  .blob-2 {
+    top: 70%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .blob-1 {
+    width: 12rem;
+    height: 12rem;
+    top: 9%;
+    left: 25%;
+  }
+
+  .blob-2 {
+    width: 10rem;
+    height: 10rem;
+    top: 75%;
+    left: 30%;
+  }
+
+  .converter__container {
+    padding: 2rem 1rem;
+  }
+  .blob {
+    flex: 0.1;
+  }
+}
